@@ -1,3 +1,6 @@
+
+##ifdef BUILD_TRAINING_GENERATORS
+
 #include <torch/extension.h>
 #include <vector>
 #include <cmath>
@@ -9,3 +12,5 @@ torch::Tensor generate_paf(torch::Tensor connections, torch::Tensor topology, to
 
 } // namespace trt_pose::train
 } // namespace trt_pose
+
+#endif

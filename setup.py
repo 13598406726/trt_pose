@@ -14,7 +14,8 @@ setup(
     description='Pose detection accelerated by NVIDIA TensorRT',
     packages=find_packages(),
     ext_package='trt_pose',
-    ext_modules=[cpp_extension.CppExtension('plugins', [
+    ext_modules=[cpp_extension.CppExtension('plugins', extra_compile_args=['-DBUILD_TRAINING_GENERATORS'],
+    [
         'trt_pose/parse/find_peaks.cpp',
         'trt_pose/parse/paf_score_graph.cpp',
         'trt_pose/parse/refine_peaks.cpp',

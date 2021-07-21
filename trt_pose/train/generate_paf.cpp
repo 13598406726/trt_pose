@@ -1,3 +1,5 @@
+#ifdef BUILD_TRAINING_GENERATORS
+
 #include "generate_paf.hpp"
 
 #define EPS 1e-5;
@@ -98,3 +100,5 @@ torch::Tensor generate_paf(torch::Tensor connections, torch::Tensor topology, to
 
 } // namespace trt_pose::train
 } // namespace trt_pose
+
+#endif
